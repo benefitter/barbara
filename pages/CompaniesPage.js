@@ -6,7 +6,7 @@ function CompaniesPage() {
     this.prototype.constructor = CompaniesPage;
 
     // User Dropdown
-    this.userDropDown = element(by.className("el-dropdown"));
+    this.userDropDown = element(by.className('el-dropdown'));
     this.profile = element(by.cssContainingText('.el-dropdown-menu__item', 'Profile'));
     this.logOut = element(by.cssContainingText('.el-dropdown-menu__item', 'Log Out'));
 
@@ -17,6 +17,10 @@ function CompaniesPage() {
     // Filters
     this.clientType = element(by.css('.actions')).all(by.css('.el-select')).first();
     this.sortFilter = element(by.css('.actions')).all(by.css('.el-select')).last();
+
+    // Icons
+    this.searchIcon = element(by.className('search-icon'));
+    this.plusIcon = element(by.className('add-plus-large'));
 
     this.showClients = function(category) {
         this.clientType.click();
@@ -30,6 +34,10 @@ function CompaniesPage() {
 
         const selection = element(by.cssContainingText('.el-select-dropdown__item', category));
         selection.click();
+    };
+
+    this.addCompany = function() {
+        this.plusIcon.click();
     };
 
     this.countClients = function() {
