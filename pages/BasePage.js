@@ -10,6 +10,10 @@ BasePage.prototype.getCurrentUrl = function() {
     return browser.getCurrentUrl();
 };
 
+BasePage.prototype.getTitle = function() {
+    return browser.getTitle();
+};
+
 BasePage.prototype.isElementPresent = function(element) {
 
 };

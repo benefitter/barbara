@@ -23,6 +23,10 @@ function CompanyProfile() {
     this.email = element(by.id('email'));
     this.phone = element(by.id('phone_number'));
 
+    // Buttons
+    this.cancel = element(by.buttonText('Cancel'));
+    this.next = element(by.buttonText('Next'));
+
     this.enterCompanyName = function(name) {
         this.companyName.sendKeys(name);
     };
@@ -37,6 +41,9 @@ function CompanyProfile() {
 
     this.enterState = function(state) {
         this.state.sendKeys(state);
+        const stateChoice = element(by.cssContainingText('.el-select-dropdown__item', state));
+        this.prototype.sleep.call(this);
+        stateChoice.click();
     };
 
     this.enterZip = function(zip) {

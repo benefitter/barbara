@@ -11,7 +11,8 @@ exports.config = {
     },
 
     suites: {
-        example: ['../spec/*.js']
+        example: ['../spec/*.js'],
+        company: ['../spec/create-company-spec.js']
     },
 
     onPrepare: function() {
