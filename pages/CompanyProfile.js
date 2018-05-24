@@ -6,7 +6,8 @@ function CompanyProfile() {
     this.prototype.constructor = CompanyProfile;
 
     // Company Information
-    this.companyName = element(by.id('company_name'));
+    //this.companyName = element(by.id('company_name'));
+    this.companyName = element(by.name('company_name'));
     this.address = element(by.id('address'));
     this.city = element(by.id('city'));
     this.state = element(by.name('state'));
